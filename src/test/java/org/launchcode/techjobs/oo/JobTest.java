@@ -119,7 +119,7 @@ public class JobTest {
     public void testToStringHandlesEmptyField() {
         Employer testEmployer = new Employer("Great Boss");
         Location testLocation = new Location("Choice location");
-        PositionType testPositionType = new PositionType();
+        PositionType testPositionType = new PositionType(null);
         CoreCompetency testCoreCompetency = new CoreCompetency("All those LC101 skills");
         Job testJob2 = new Job ("Another one", testEmployer, testLocation, testPositionType, testCoreCompetency);
         assertTrue(testJob2.toString().contains("Data not available"));
