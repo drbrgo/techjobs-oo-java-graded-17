@@ -68,13 +68,13 @@ public class Job {
     @Override
     public String toString() {
         String newLine = System.lineSeparator();
-        if(employer.getValue() == null) {
+        if(employer.getValue() == null || employer.getValue().isBlank()) {
             employer.setValue("Data not available");
         }
         if(location.getValue() == null) {
             location.setValue("Data not available");
         }
-        if(positionType.getValue() == null) {
+        if(positionType.getValue() == null || positionType.getValue().isBlank()) {
             positionType.setValue("Data not available");
         }
         if(coreCompetency.getValue() == null) {
@@ -88,6 +88,16 @@ public class Job {
                 "Location: " + location.getValue() + newLine +
                 "Position Type: " + positionType.getValue() + newLine +
                 "Core Competency: " + coreCompetency.getValue() + newLine;
+
+//        String newline = System.lineSeparator();
+//        return  newline +
+//                "ID: " + id + newline +
+//                "Name: " + name + newline +
+//                "Employer: " + employer + newline +
+//                "Location: " + location.getValue() + newline +
+//                "Position Type: " + positionType + newline +
+//                "Core Competency: " + coreCompetency.getValue() + newline;
+
     }
 
 
